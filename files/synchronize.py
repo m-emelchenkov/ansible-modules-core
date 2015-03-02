@@ -316,7 +316,7 @@ def main():
         cmd = cmd + " --rsync-path=%s" % (rsync_path)
 
     if rsync_opts:
-        cmd = cmd + " " +  " ".join(rsync_opts)
+        cmd = cmd + " " +  ",".join(rsync_opts)
 
     changed_marker = '<<CHANGED>>'
     cmd = cmd + " --out-format='" + changed_marker + "%i %n%L'"
